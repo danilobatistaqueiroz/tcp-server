@@ -44,7 +44,7 @@ Type the querylength and the query, for example:
 To exit, type .  
 `.`  
 
-**How to compile, test and analisy with sonarqube**  
+**How to compile, test and analyze with sonarqube**  
 Enter in the directory and type:  
 `gradle build jacocoTestReport` 
 
