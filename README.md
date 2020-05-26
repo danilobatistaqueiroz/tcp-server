@@ -1,12 +1,19 @@
 # TCP Server
 
-**How to use**
+**Running using the jar file**  
 
-**Running using the jar**  
 You can download the jar file and run:  
-download the jar file in: https://github.com/danilobatistaqueiroz/tcp-server/build/distributions/prova.zip   
-extract the file 
-run the server (choose a port, eg. 8888): `./prova/bin/prova 8888`  
+Download the jar file in: https://github.com/danilobatistaqueiroz/tcp-server/build/distributions/prova.zip   
+Extract the file   
+
+Run the server (choose a port, eg. 8888):  
+Using Linux:  `./prova/bin/prova 8888`   
+Using Windows:  `prova\bin\prova 8888`   
+
+Run the client:  
+Open another shell and type: `telnet localhost 8888`  
+Type the querylength and the query, for example: `3:mib`  
+To exit, type: `.`  
 
 
 **Building and running**  
@@ -20,7 +27,7 @@ enter in the directory:
 type (where 8888 is the port):  
 `gradle build run --args=8888`  
 
-open another shell and type:
+open another shell and type:  
 `telnet localhost 8888`  
 
 type the querylength and the query, for example:  
