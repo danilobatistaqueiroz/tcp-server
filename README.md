@@ -3,7 +3,7 @@
 **Running using the jar file**  
 
 You can download the jar file and run:  
-Download the jar file in: https://github.com/danilobatistaqueiroz/tcp-server/build/distributions/prova.zip   
+Download the jar file in: https://github.com/danilobatistaqueiroz/tcp-server/blob/master/build/distributions/prova.zip   
 Extract the file   
 
 Run the server (choose a port, eg. 8888):  
