@@ -1,6 +1,6 @@
 # TCP Server
 
-**Running using the jar file**  
+**Running the jar file**  
 
 You can download the jar file and run:  
 Download the jar file in: https://github.com/danilobatistaqueiroz/tcp-server/blob/master/build/distributions/prova.zip   
@@ -14,6 +14,13 @@ Run the client:
 Open another shell and type: `telnet localhost 8888`  
 Type the querylength and the query, for example: `3:mib`  
 To exit, type: `.`  
+
+> If you don't have a telnet client:   
+> On Windows, you can use a tool, eg. Putty:  
+> https://putty.org/  
+> https://blog.octanetworks.com/how-to-telnet-using-putty/  
+> On Ubuntu Linux, you can install using:  
+> `sudo apt-get update && apt-get install telnet` 
 
 
 **Building and running**  
@@ -29,14 +36,6 @@ Type (where 8888 is the port):
 
 Open another shell and type:  
 `telnet localhost 8888`  
-
-> If you don't have a telnet client:   
-> On Windows, you can use a tool, eg. Putty:  
-https://putty.org/  
-https://blog.octanetworks.com/how-to-telnet-using-putty/  
-> On Ubuntu Linux, you can install using:  
-`sudo apt-get update && apt-get install telnet`  
-
 
 Type the querylength and the query, for example:  
 `3:mib`  
