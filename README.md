@@ -18,31 +18,39 @@ To exit, type: `.`
 
 **Building and running**  
 You can download the source code, compile and run:  
-enter in a command shell and type:  
+Enter in a command shell and type:  
 `git clone https://github.com/danilobatistaqueiroz/tcp-server.git`  
 
-enter in the directory:  
+Enter in the directory:  
 `cd tcp-server`  
 
-type (where 8888 is the port):  
+Type (where 8888 is the port):  
 `gradle build run --args=8888`  
 
-open another shell and type:  
+Open another shell and type:  
 `telnet localhost 8888`  
 
-type the querylength and the query, for example:  
+> If you don't have a telnet client:   
+> On Windows, you can use a tool, eg. Putty:  
+https://putty.org/  
+https://blog.octanetworks.com/how-to-telnet-using-putty/  
+> On Ubuntu Linux, you can install using:  
+`sudo apt-get update && apt-get install telnet`  
+
+
+Type the querylength and the query, for example:  
 `3:mib`  
 
-to exit, type .  
+To exit, type .  
 `.`  
 
 **How to compile, test and analisy with sonarqube**  
-enter in the directory and type:  
+Enter in the directory and type:  
 `gradle build jacocoTestReport` 
 
-start a sonarqube server  
+Start a sonarqube server  
 
-update the informations to sonarqube:  
+Update the informations to sonarqube:  
 `gradle sonarqube` 
 
-open a browser and navigate to sonarqube dashboard
+Open a browser and navigate to sonarqube dashboard
