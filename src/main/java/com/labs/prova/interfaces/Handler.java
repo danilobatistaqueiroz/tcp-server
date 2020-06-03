@@ -7,5 +7,5 @@ import com.labs.prova.ClientHandler;
 
 @ImplementedBy(ClientHandler.class)
 public interface Handler extends Runnable {
-    public void setClientSocket(Socket clientSocket);
+    void setClientSocket(Socket clientSocket);
 }

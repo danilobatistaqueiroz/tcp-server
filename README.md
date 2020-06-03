@@ -40,8 +40,6 @@ Open another shell and type:
 Type the querylength and the query, for example:  
 `3:mib`  
 
-To exit, type .  
-`.`  
 
 **How to compile, test and analyze with sonarqube**  
 Enter in the directory and type:  

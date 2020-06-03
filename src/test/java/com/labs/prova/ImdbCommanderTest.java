@@ -4,12 +4,14 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.IOException;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class ImdbCommanderTest {
 
-    @Test 
-    void search_movies_by_title() throws IOException {
+    @Test
+    @DisplayName("search movies by title using imdb")
+    void searchMoviesByTitle() throws IOException {
         ImdbCommander imdbCommander = new ImdbCommander();
         String movies = imdbCommander.searchMoviesByTitle("mib");
         int diviser = movies.indexOf(":");

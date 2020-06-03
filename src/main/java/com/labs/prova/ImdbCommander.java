@@ -1,8 +1,11 @@
 package com.labs.prova;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 
+import org.apache.commons.text.StringEscapeUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
@@ -10,15 +13,14 @@ import org.jsoup.select.Elements;
 import com.labs.prova.interfaces.Commander;
 
 public class ImdbCommander implements Commander {
-    public void printMovies(PrintWriter out, String criteria) throws IOException {
-        String titles = searchMoviesByTitle(criteria);
-        String[] movies = titles.split("\n");
-        for(String movie : movies) {
-            out.println(movie);
-        }
+    
+    private String encodeValue(String value) throws UnsupportedEncodingException {
+        return URLEncoder.encode(value, StandardCharsets.UTF_8.toString());
     }
     
-    String searchMoviesByTitle(String search) throws IOException {
+    public String searchMoviesByTitle(String search) throws IOException {
+        search = encodeValue(search);
+        search = StringEscapeUtils.escapeHtml4(search);
         String url = String.format("https://www.imdb.com/find?q=%s&s=tt&ref_=fn_tt", search);
         Document doc = Jsoup.connect(url).get();
         Elements findList = doc.getElementsByClass("findList");

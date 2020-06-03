@@ -31,10 +31,12 @@ public class Application {
     }
     
     int getPort(String argv[]) {
-        if (argv.length < 1) throw new InvalidPortException("Port not informed!");
+        if (argv.length < 1) {
+            throw new InvalidPortException("Port not informed!");
+        }
         int port = Integer.parseInt(argv[0]);
-        if(port < 1024 || port > 49151) {
-            throw new InvalidPortException("Invalid port range, choose between 1024 and 49151!");
+        if(port != 23 && (port < 1024 || port > 49151)) {
+            throw new InvalidPortException("Invalid port range, choose between 1024 and 49151 or the standard port 23!");
         }
         return port;
     }

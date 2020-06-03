@@ -10,19 +10,22 @@ import static org.mockito.Mockito.when;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 class ApplicationTest {
     
     @Test 
-    void get_port() throws Exception {
+    @DisplayName("get a port to the server")
+    void getPort() throws Exception {
         Application application = new Application();
         int port = application.getPort(new String[]{"8933"});
         assertEquals(8933, port);
     }
     
     @Test
-    void inject_handler() throws Exception {
+    @DisplayName("inject handle via DI")
+    void injectHandler() throws Exception {
         ServerSocket serverSocket = mock(ServerSocket.class);
         Socket socket = mock(Socket.class);
         when(serverSocket.getLocalPort()).thenReturn(8933);
@@ -31,5 +34,7 @@ class ApplicationTest {
         when(socket.getInputStream()).thenReturn(System.in);
         Application application = new Application();
         application.injectHandler(serverSocket);
+        socket.close();
+        serverSocket.close();
     }
 }
