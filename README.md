@@ -13,7 +13,7 @@ Using Windows:  `prova\bin\prova 8888`
 Run the client:  
 Open another shell and type: `telnet localhost 8888`  
 Type the querylength and the query, for example: `3:mib`  
-To exit, type: `.`  
+
 
 > If you don't have a telnet client:   
 > On Windows, you can use a tool, eg. Putty:  
